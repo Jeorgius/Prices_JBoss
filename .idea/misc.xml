@@ -6,13 +6,13 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/enterprise" />
     <file type="web" url="file://$PROJECT_DIR$/view" />
   </component>
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/back/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/view/target/maven-archiver/pom.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/enterprise/target/maven-archiver/pom.properties" />
       </list>
     </option>
   </component>

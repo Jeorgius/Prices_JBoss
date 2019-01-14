@@ -8,6 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="back" />
         <module name="enterprise" />
+        <module name="maven-archiver (1)" />
+        <module name="maven-archiver (2)" />
+        <module name="maven-archiver (3)" />
         <module name="view" />
       </profile>
     </annotationProcessing>
