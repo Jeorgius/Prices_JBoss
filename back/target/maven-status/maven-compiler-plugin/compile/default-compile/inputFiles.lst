@@ -1,3 +1,5 @@
 D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\ejb\PriceEJB.java
 D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\entities\Price.java
-D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\NewSessionBean.java
+D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\services\PriceService.java
+D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\services\tools\DateValidator.java
+D:\Programming\Interview\Prices_JBoss\back\src\main\java\com\jeorgius\services\IPrices.java

@@ -3,6 +3,9 @@ package com.jeorgius.rest;
 
 
 
+import com.jeorgius.services.PriceService;
+
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,8 +24,10 @@ import java.util.logging.Logger;
 public class ImportPrices {
     private Logger log = Logger.getLogger(ImportPrices.class.getName());
 
+    @Inject
+    private PriceService priceService;
+
     @POST
-    //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public void importPrice(@Context HttpServletRequest req,
                             @Context HttpServletResponse resp,
                             @FormParam("value") List<String> values,
@@ -38,7 +43,7 @@ public class ImportPrices {
         log.info(newNow);
 
         Date date1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                .parse(date_end.get(0).replace("T"," ").replace("-","/"));
+                .parse(date_end.get(0)/*.replace("T"," ").replace("-","/")*/);
         log.info(date1.toString());
 //        req.getRequestDispatcher("/index.jsp").forward(req,resp);
     }

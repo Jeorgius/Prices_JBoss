@@ -5,6 +5,7 @@ import com.jeorgius.entities.Price;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class PriceEJB {
     }
 
     public List<Price> exportPrices(String product_code){
-        return new ArrayList<>();
+        TypedQuery<Price> query = em.createQuery("Select p from Price p",Price.class);
+        return query.getResultList();
     }
 }

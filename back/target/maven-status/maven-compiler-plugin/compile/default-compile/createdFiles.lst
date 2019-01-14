@@ -1,3 +1,5 @@
+com\jeorgius\services\tools\DateValidator.class
+com\jeorgius\services\IPrices.class
 com\jeorgius\ejb\PriceEJB.class
+com\jeorgius\services\PriceService.class
 com\jeorgius\entities\Price.class
-com\jeorgius\NewSessionBean.class
