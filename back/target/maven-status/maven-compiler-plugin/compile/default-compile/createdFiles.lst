@@ -1,0 +1,3 @@
+com\jeorgius\ejb\PriceEJB.class
+com\jeorgius\entities\Price.class
+com\jeorgius\NewSessionBean.class

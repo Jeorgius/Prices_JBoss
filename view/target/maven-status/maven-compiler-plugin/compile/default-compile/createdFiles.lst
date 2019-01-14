@@ -1,0 +1,4 @@
+com\jeorgius\rest\Rest.class
+com\jeorgius\rest\cors\CorsProvider.class
+com\jeorgius\rest\CreateProduct.class
+com\jeorgius\rest\ImportPrices.class

@@ -1,0 +1,19 @@
+.content{
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+}
+
+.addGoods{
+    grid-column: 1;
+    -ms-grid-column: 1;
+    -moz-grid-column: 1;
+}
+
+.addPrices{
+    grid-column: 2;
+    -ms-grid-column: 2;
+    -moz-grid-column: 2;
+}
