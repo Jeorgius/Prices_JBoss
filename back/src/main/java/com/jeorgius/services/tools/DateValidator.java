@@ -10,7 +10,7 @@ import java.util.List;
 @Singleton
 public class DateValidator {
 
-    //Chrome deletes last zeros, when time is hh:mm:00, and change date to parseable ones
+    //Chrome removes last zeros, when time is hh:mm:00, so add ":00" and change date to parseable ones
     public List<Date> reParseDates(List<String> wetDates) throws ParseException {
         List<Date> dryDates = new ArrayList<>();
 
@@ -23,5 +23,15 @@ public class DateValidator {
             );
         }
         return dryDates;
+    }
+
+    //Dates should start and end correctly
+    public void ValidateBeginEnd(List<Date> dates_begin, List<Date> dates_end) throws Exception {
+        for(int i=0; i<dates_begin.size();i++){
+            if((dates_end.get(i).getTime()-dates_begin.get(i).getTime())<0)
+                throw new Exception("Some dates are set wrong - Begin: " + dates_begin.get(i)
+                        + " End: " + dates_end.get(i)
+                );
+        }
     }
 }

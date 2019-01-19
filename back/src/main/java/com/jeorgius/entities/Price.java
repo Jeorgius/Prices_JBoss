@@ -10,24 +10,31 @@ public class Price {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String product_code;
+    @ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name="product_code")
+    private Product product;
+
     private int number;
     private int depart;
     private Date p_begin;
     private Date p_end;
     private long value;
 
+    public Price(){}
+
+    public Price(Product product, int depart, Date p_begin, Date p_end, long value) {
+        this.product = product;
+        this.depart = depart;
+        this.p_begin = p_begin;
+        this.p_end = p_end;
+        this.value = value;
+    }
+
     public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
-    }
-    public String getProduct_code() {
-        return product_code;
-    }
-    public void setProduct_code(String product_code) {
-        this.product_code = product_code;
     }
     public int getNumber() {
         return number;
@@ -58,5 +65,11 @@ public class Price {
     }
     public void setP_end(Date p_end) {
         this.p_end = p_end;
+    }
+    public Product getProduct() {
+        return product;
+    }
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

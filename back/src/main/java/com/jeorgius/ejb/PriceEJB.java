@@ -19,8 +19,13 @@ public class PriceEJB {
         em.persist(imPrice);
     }
 
-    public List<Price> exportPrices(String product_code){
+    public List<Price> exportPrices(){
         TypedQuery<Price> query = em.createQuery("Select p from Price p",Price.class);
         return query.getResultList();
+    }
+
+    public List<Price> findProductPrices(String product_code){
+        TypedQuery<Price> query = em.createQuery("Select p from Price p where p.product.id=:product_code",Price.class);
+        return query.setParameter("product_code", product_code).getResultList();
     }
 }

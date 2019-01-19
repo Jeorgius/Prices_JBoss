@@ -3,6 +3,7 @@ package com.jeorgius.rest;
 
 
 
+import com.jeorgius.services.IPrices;
 import com.jeorgius.services.PriceService;
 
 import javax.inject.Inject;
@@ -16,6 +17,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -25,26 +27,14 @@ public class ImportPrices {
     private Logger log = Logger.getLogger(ImportPrices.class.getName());
 
     @Inject
-    private PriceService priceService;
+    private IPrices priceService;
 
     @POST
     public void importPrice(@Context HttpServletRequest req,
                             @Context HttpServletResponse resp,
                             @FormParam("value") List<String> values,
                             @FormParam("date_begin") List<String> date_begin,
-                            @FormParam("date_end") List<String> date_end) throws ServletException, IOException, ParseException {
-        log.info(values.toString());
-        log.info(date_begin.toString());
-        log.info(date_end.toString());
-        Date now = new Date();
-        log.info("Standard date: "+now);
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        String newNow = dateFormat.format(now);
-        log.info(newNow);
-
-        Date date1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                .parse(date_end.get(0)/*.replace("T"," ").replace("-","/")*/);
-        log.info(date1.toString());
-//        req.getRequestDispatcher("/index.jsp").forward(req,resp);
+                            @FormParam("date_end") List<String> date_end) throws Exception {
+        priceService.importPrices(new ArrayList<String>(),date_begin,date_end,new ArrayList<String>());
     }
 }

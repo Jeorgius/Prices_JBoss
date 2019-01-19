@@ -59,8 +59,7 @@
     </schema>
     <schema id="14" parent="2" name="pricecat">
       <ObjectId>39796</ObjectId>
-      <IntrospectionTimestamp>2019-01-14.20:51:30.048</IntrospectionTimestamp>
-      <IntrospectionStateNumber>3731</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-01-15.20:16:43.178</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <schema id="15" parent="2" name="store">
@@ -115,74 +114,5 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="24" parent="14" name="price_id_seq">
-      <ObjectId>39808</ObjectId>
-      <StateNumber>3731</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-    </sequence>
-    <table id="25" parent="14" name="price">
-      <ObjectId>39810</ObjectId>
-      <StateNumber>3731</StateNumber>
-    </table>
-    <column id="26" parent="25" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>3731</StateNumber>
-      <DefaultExpression>nextval(&apos;pricecat.price_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>20</TypeId>
-      <SequenceName>pricecat.price_id_seq</SequenceName>
-    </column>
-    <column id="27" parent="25" name="depart">
-      <Position>2</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>3731</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="28" parent="25" name="number">
-      <Position>3</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>3731</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="29" parent="25" name="p_begin">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>3731</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="30" parent="25" name="p_end">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>3731</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="31" parent="25" name="product_code">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>3731</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="32" parent="25" name="value">
-      <Position>7</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>3731</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <index id="33" parent="25" name="price_pkey">
-      <ObjectId>39814</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="34" parent="25" name="price_pkey">
-      <ObjectId>39815</ObjectId>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>price_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>

@@ -1,4 +1,5 @@
 com\jeorgius\services\tools\DateValidator.class
+com\jeorgius\entities\Product.class
 com\jeorgius\services\IPrices.class
 com\jeorgius\ejb\PriceEJB.class
 com\jeorgius\services\PriceService.class
